@@ -98,10 +98,18 @@
     
   </body>
   <script>
+
+let result = JSON.parse(localStorage.getItem('result')) || {
+            equal: 0,
+          };
+
     let calculation = "";
 
     function printCalculation() {
       console.log(calculation);
+
+      localStorage.setItem('result', JSON.stringify(result));
+
     }
   </script>
 </html>
